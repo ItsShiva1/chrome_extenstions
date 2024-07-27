@@ -8,5 +8,8 @@
         public string? Brand { get; set; }
         public List<string> MappedUrls{ get; set; } = new List<string>();
         public string? Url { get; set; }
+        public int Price { get; set; }
+        public string? SellerId { get; set; }
+        public bool InStock { get; set; }
     }
 }

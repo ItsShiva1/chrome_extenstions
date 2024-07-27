@@ -27,6 +27,7 @@ namespace chrome_extenstions.Services
                 if (datasource != null)
                 {
                     var dictionary = JsonSerializer.Deserialize<Dictionary<string, T>>(datasource.Body);
+                    if (dictionary == null) return new List<T>();
                     List<T> data = new List<T>();
                     foreach (var key in dictionary)
                     {
