@@ -27,12 +27,12 @@ namespace chrome_extenstions.Services
 
         }
 
-        public Product? GetProductByMappedUrl(string productMappedUrl)
+        public Product? GetProductByMappedUrls(List<string> productMappedUrls)
         {
             var data = GetAllProducts();
-            if (data != null)
+            if (data != null && productMappedUrls.Any())
             {
-                return data.Where(x => x.MappedUrl.Equals(productMappedUrl)).FirstOrDefault();
+                return data.Where(x => x.MappedUrls.Contains(productMappedUrls[0])).FirstOrDefault();
             }
             return default;
         }

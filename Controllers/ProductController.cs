@@ -33,7 +33,7 @@ namespace chrome_extenstions.Controllers
         public Product? GetProductByMappedUrl([FromBody] Product product)
         {
             if (product == null) return null;
-            return _productService.GetProductByMappedUrl(product.MappedUrl);
+            return _productService.GetProductByMappedUrls(product.MappedUrls);
         }
 
         [HttpPost("AddProducts")]

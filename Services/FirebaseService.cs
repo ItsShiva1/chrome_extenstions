@@ -3,7 +3,6 @@ using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
-using Microsoft.OpenApi.Any;
 
 namespace chrome_extenstions.Services
 {
